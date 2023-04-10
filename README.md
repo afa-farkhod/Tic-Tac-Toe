@@ -7,5 +7,5 @@ Game is played between two players 'X' and 'O'
 
 'X' starts the game, whichever side gets three figure in a row wins. Below the main window, outputs displays the winner side
 
-![image](https://user-images.githubusercontent.com/24220136/230802895-ec464f7c-72b5-4bb1-8625-efd75d58e855.png)
+![image](https://user-images.githubusercontent.com/24220136/230802982-7dff198b-7517-4411-881f-f8267fd78a12.png)
 
