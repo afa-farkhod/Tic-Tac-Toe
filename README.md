@@ -27,3 +27,6 @@ For each session, the first client connecting to the server is identified as pla
 - The implementation of Java network programs at the socket level is tightly synchronized. An operation to send data from one machine requires an operation to receive data from the other machine. As shown in this example, the server and the client are tightly synchronized to send or receive data.
 
 - Source code is given in `TicTacToeOverNetwork` folder, and the sample run outcome is as following 
+
+![image](https://github.com/af4092/Tic-Tac-Toe/assets/24220136/0441ff2e-c0bd-4685-ac00-dd570e871959)
+
