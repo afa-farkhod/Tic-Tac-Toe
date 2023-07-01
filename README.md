@@ -69,3 +69,47 @@ communicates with the two players and determines the status of the game. The ser
   - The `isWon` method checks if a player has won the game by checking the rows, columns, and diagonals of the game board.
 
   - The game continues until a player wins or the game board is full.
+
+ -------------------------
+
+- `TicTacToeClient.java`  is designed to be used as a client for a multiplayer Tic-Tac-Toe game. It is expected to be used in conjunction with a server application that handles the game logic and communication with the clients. The server application would listen for client connections and manage the game state:
+
+  - The code is in a package named `com.example.javafxprojects2`.
+
+  - The `TicTacToeClient` class extends the Application class provided by `JavaFX`.
+
+  - The start method is overridden to create the user interface for the client application.
+
+  - The user interface consists of a 3x3 grid of cells, represented by the Cell class, a title label (`lbTitle`), and a status label (`lbStatus`).
+
+  - The `connectToServer` method is called to establish a connection with the server.
+
+  - The client connects to the server using the host address "localhost" and `port:8000`.
+
+  - A thread is started to handle the communication with the server.
+
+  - The client receives the player number (PLAYER1 or PLAYER2) from the server.
+
+  - If the client is PLAYER1, it sets its token as 'X', displays the appropriate messages, and starts its turn.
+
+  - If the client is PLAYER2, it sets its token as '0' and displays the appropriate messages.
+
+  - The client enters a loop to continue playing until the game is over.
+
+  - If it is the client's turn (based on the player number), it waits for the player to make a move by calling the `waitForPlayerAction` method.
+
+  - The client sends the selected move (row and column) to the server by calling the `sendMove` method.
+
+  - The client receives game status information from the server by calling the `receiveInfoFromServer` method.
+
+  - If the client wins, loses, or the game ends in a draw, the appropriate message is displayed, and the game continues or ends based on the received status.
+
+  - If it is not the client's turn, it receives the opponent's move from the server by calling the `receiveMove` method.
+
+  - The Cell class represents a cell in the Tic-Tac-Toe grid. It extends the Pane class and handles mouse clicks.
+
+  - Each cell can have a token ('X', '0', or ' ') and is displayed using JavaFX shapes (lines for 'X' and an ellipse for '0').
+
+  - When a cell is clicked and it is the client's turn, the cell's token is set to the client's token, and the selected move is stored.
+
+  - The client application is started by launching the JavaFX application using the main method.
